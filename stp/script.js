@@ -158,3 +158,5 @@ canvas.addEventListener('wheel', (e) => {
 
     drawOnCanvas();  // 캔버스를 다시 그리기
 });
+
+console.log('민우쌤 최고!');
