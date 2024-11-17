@@ -2,7 +2,20 @@ let scale = 20;  // 확대/축소 비율
 let offsetX = 250;  // 좌표평면의 중심 X 좌표 (초기값)
 let offsetY = 250;  // 좌표평면의 중심 Y 좌표 (초기값)
 let effectRange = [];
-let centerX, centerY;  // 중심점 좌표
+let centerX = 0, centerY = 0;  // 기본값 (0, 0)
+const defaultRange = 4;  // 기본 범위 값
+
+// 페이지 로드 시 기본값으로 캔버스 그리기
+window.onload = function() {
+    // 입력 필드에 기본값 설정
+    document.getElementById('x-coordinate').value = centerX;
+    document.getElementById('y-coordinate').value = centerY;
+    document.getElementById('range').value = defaultRange;
+
+    // 기본값으로 캔버스 그리기
+    generateEffectRange(centerX, centerY, defaultRange); // 기본값으로 좌표 범위 계산
+    drawOnCanvas(); // 캔버스에 점 그리기
+};
 
 // 좌표와 범위 입력 처리
 document.getElementById('x-coordinate').addEventListener('input', updateCanvas);
@@ -126,10 +139,22 @@ canvas.addEventListener('mouseout', () => {
 // 확대/축소 (마우스 휠)
 canvas.addEventListener('wheel', (e) => {
     e.preventDefault();
-    if (e.deltaY < 0) {
-        scale *= 1.1; // 확대
-    } else {
-        scale /= 1.1; // 축소
-    }
-    drawOnCanvas();
+
+    const canvasRect = canvas.getBoundingClientRect();  // 캔버스의 화면 내 위치 계산
+    const mouseX = e.clientX - canvasRect.left;  // 마우스 X 위치 (캔버스 내 좌표)
+    const mouseY = e.clientY - canvasRect.top;   // 마우스 Y 위치 (캔버스 내 좌표)
+
+    // 마우스 휠 방향에 따라 확대/축소
+    const zoomFactor = e.deltaY < 0 ? 1.1 : 0.9;  // 확대: 1.1배, 축소: 0.9배
+    const zoom = scale * zoomFactor;
+
+    // 확대/축소 시 마우스 포인터 위치를 기준으로 캔버스의 좌표 이동
+    const newOffsetX = offsetX + (mouseX - offsetX) * (1 - zoomFactor);
+    const newOffsetY = offsetY + (mouseY - offsetY) * (1 - zoomFactor);
+
+    scale = zoom;  // 새로운 scale 값 설정
+    offsetX = newOffsetX;  // 새로운 중심 좌표 설정
+    offsetY = newOffsetY;  // 새로운 중심 좌표 설정
+
+    drawOnCanvas();  // 캔버스를 다시 그리기
 });
