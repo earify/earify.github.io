@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좌표평면</title>
+    <style>
+        #coordinateCanvas {
+            border: 1px solid black;
+            width: 500px;
+            height: 500px;
+        }
+        #output {
+            margin-top: 10px;
+        }
+        #coordinateList {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>좌표평면에 점 찍기</h2>
+    <label for="x-coordinate">시작점 X:</label>
+    <input type="number" id="x-coordinate" placeholder="X 좌표" min="-50" max="50">
+    <label for="y-coordinate">Y:</label>
+    <input type="number" id="y-coordinate" placeholder="Y 좌표" min="-50" max="50">
+    <label for="range">범위:</label>
+    <input type="number" id="range" placeholder="범위" min="1" max="20">
+    <div id="output"></div>
+    <canvas id="coordinateCanvas" width="500" height="500"></canvas>
+    
+    <div id="coordinateList">
+        <h3>좌표 목록</h3>
+        <ul id="coordinates-ul"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
