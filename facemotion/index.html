@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Analysis App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Face Analysis App</h1>
+    <div class="main-container">
+        <!-- 왼쪽: 업로드 공간 -->
+        <div class="upload-container">
+            <input type="file" id="imageUpload" accept="image/*" />
+        </div>
+
+        <!-- 오른쪽: 미리보기 공간 -->
+        <div class="preview-container">
+            <img id="previewImage" src="" alt="Preview" style="display: none;" />
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+
+    <!-- 분석 시작 버튼 -->
+    <button id="analyzeButton" class="analyze-button" disabled>Analyze Image</button>
+
+    <!-- 결과 출력 공간 -->
+    <div id="results" class="results-container"></div>
+
+    <script src="./face-api.min.js"></script>
+    <script src="./scripts.js"></script>
+</body>
+</html>
