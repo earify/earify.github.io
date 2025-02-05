@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>온라인 공용 메모장 + 파일 업로드</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>온라인 공용 메모장</h1>
+      <label class="switch">
+        <input type="checkbox" id="dark-mode-toggle" />
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <!-- 메모장 영역 -->
+    <textarea id="memo" placeholder="데이터를 로딩 중입니다..." disabled></textarea>
+    <div id="char-count">0 / 60,000자</div>
+    <div id="warning-message" class="hidden">
+      글자 수가 60,000자를 초과했습니다. 초과된 부분은 저장되지 않습니다.
+    </div>
+
+    <!-- 파일 업로드 영역 -->
+    <div id="drop-zone">여기에 파일을 드래그하거나 클릭하여 업로드하세요</div>
+    <input type="file" id="file-input" multiple hidden />
+
+    <!-- 업로드 상태 메시지 -->
+    <div id="upload-status"></div>
+
+    <!-- 업로드된 파일 리스트 (초기 로딩 메시지 포함) -->
+    <ul id="file-list">파일 목록 로딩 중...</ul>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
