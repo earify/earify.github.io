@@ -1,7 +1,5 @@
 # earify.github.io
 
-this is not official
-yeosu high school's homepage
-
-and this is invisible unicode
+For portfolios.
+these are invisible unicodes
 ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
