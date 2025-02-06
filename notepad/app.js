@@ -10,16 +10,15 @@ import {
   update
 } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
 
-// Firebase 설정
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDyLrldmMY12m7AKIHDaa9J4inlX8IFrMM",
-  authDomain: "online-notepad-or-not.firebaseapp.com",
-  databaseURL: "https://online-notepad-or-not-default-rtdb.firebaseio.com",
-  projectId: "online-notepad-or-not",
-  storageBucket: "online-notepad-or-not.firebasestorage.app",
-  messagingSenderId: "178249811853",
-  appId: "1:178249811853:web:5642566fbfb4bc8d6fdfc4",
-  measurementId: "G-ZN50XL152S"
+  apiKey: "AIzaSyAKqk74u9c4Y5C9P9WmanYlki_YkuOumIo",
+  authDomain: "fjqktnkkl.firebaseapp.com",
+  projectId: "fjqktnkkl",
+  storageBucket: "fjqktnkkl.firebasestorage.app",
+  messagingSenderId: "788085573035",
+  appId: "1:788085573035:web:ec7b04ca827b256eecfeee",
+  measurementId: "G-SXWZZ939LB"
 };
 
 const app = initializeApp(firebaseConfig);
