@@ -267,3 +267,5 @@ window.deleteFile = async function (fileId) {
   await remove(ref(database, `files/${fileId}`));
 };
 
+console.log("실행중임")
+
