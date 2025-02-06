@@ -15,6 +15,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyDgoWPHwKnm0TNtZVAvd9W3Vgzk4T5MRVY",
   authDomain: "temp-notepad.firebaseapp.com",
   projectId: "temp-notepad",
+projectId: "temp-notepad",
   storageBucket: "temp-notepad.firebasestorage.app",
   messagingSenderId: "597209729146",
   appId: "1:597209729146:web:a9d13f6eb5f093148d93c3",
