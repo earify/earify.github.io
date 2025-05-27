@@ -12,14 +12,14 @@ import {
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAKqk74u9c4Y5C9P9WmanYlki_YkuOumIo",
-  authDomain: "fjqktnkkl.firebaseapp.com",
-  databaseURL: "https://fjqktnkkl-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "fjqktnkkl",
-  storageBucket: "fjqktnkkl.firebasestorage.app",
-  messagingSenderId: "788085573035",
-  appId: "1:788085573035:web:ec7b04ca827b256eecfeee",
-  measurementId: "G-SXWZZ939LB"
+  apiKey: "AIzaSyDgoWPHwKnm0TNtZVAvd9W3Vgzk4T5MRVY",
+  authDomain: "temp-notepad.firebaseapp.com",
+  databaseURL: "https://temp-notepad-default-rtdb.firebaseio.com",
+  projectId: "temp-notepad",
+  storageBucket: "temp-notepad.firebasestorage.app",
+  messagingSenderId: "597209729146",
+  appId: "1:597209729146:web:a9d13f6eb5f093148d93c3",
+  measurementId: "G-TKVFRGNWZ4"
 };
 
 const app = initializeApp(firebaseConfig);
