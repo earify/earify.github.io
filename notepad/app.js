@@ -12,14 +12,14 @@ import {
 
 // Firebase 설정
 const firebaseConfig = {
-  apiKey: "AIzaSyDyLrldmMY12m7AKIHDaa9J4inlX8IFrMM",
-  authDomain: "online-notepad-or-not.firebaseapp.com",
-  databaseURL: "https://online-notepad-or-not-default-rtdb.firebaseio.com",
-  projectId: "online-notepad-or-not",
-  storageBucket: "online-notepad-or-not.firebasestorage.app",
-  messagingSenderId: "178249811853",
-  appId: "1:178249811853:web:d2ccdf5e966b0b8b6fdfc4",
-  measurementId: "G-M5VNNL51DZ"
+  apiKey: "AIzaSyDgoWPHwKnm0TNtZVAvd9W3Vgzk4T5MRVY",
+  authDomain: "temp-notepad.firebaseapp.com",
+  databaseURL: "https://temp-notepad-default-rtdb.firebaseio.com",
+  projectId: "temp-notepad",
+  storageBucket: "temp-notepad.firebasestorage.app",
+  messagingSenderId: "597209729146",
+  appId: "1:597209729146:web:a9d13f6eb5f093148d93c3",
+  measurementId: "G-TKVFRGNWZ4"
 };
 
 const app = initializeApp(firebaseConfig);
